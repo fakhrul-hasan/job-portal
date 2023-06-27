@@ -3,25 +3,54 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --text-color: #00044a;
+    --secondary-color: #27cb8b;
+    --primary-color: #0010ff;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  .btn-secondary{
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 10px;
+    text-transform: uppercase;
+  }
+  .btn-slide{
+    border-radius: 10px;
+    text-transform: uppercase;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    transition: color 0.4s linear;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .btn-slide::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--secondary-color);
+    transition: transform 0.5s ease-in-out;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  .btn-slide:hover::before,
+  .btn-slide:focus::before{
+    transform: scaleX(1);
+  }
+  .hero-bg{
+    background-image: url(../../public/hero-shape2.png);
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    width: 50%;
+  }
