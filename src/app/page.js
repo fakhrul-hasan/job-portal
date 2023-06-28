@@ -1,6 +1,7 @@
 import Image from "next/image";
 import banner2 from "../../public/hero-shape2.png";
 import banner1 from "../../public/hero-img.png.png";
+import JobSection from "@/components/JobSection";
 export default function Home() {
   return (
     <div className="container mx-auto">
@@ -10,13 +11,14 @@ export default function Home() {
           <h1 className="text-7xl font-bold text-text-color">Find Your Next Dream Job</h1>
           <div>
             <button className="btn-slide mr-2">Looking For A job?</button>
-            <button className="btn-secondary">Find Talent</button>
+            <button className="btn-secondary hover:bg-secondary-color">Find Talent</button>
           </div>
         </div>
         <div className="relative hero-bg">
           <Image className="my-40" src={banner1}/>
         </div>
       </section>
+      <JobSection></JobSection>
     </div>
   );
 }

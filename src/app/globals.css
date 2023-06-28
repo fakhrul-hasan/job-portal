@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --text-color: #00044a;
+    --text-color: #0d3562;
     --secondary-color: #27cb8b;
     --primary-color: #0010ff;
   }
@@ -53,4 +53,13 @@
     right: 0;
     background-repeat: no-repeat;
     width: 50%;
+  }
+  .social-icon{
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-out 0s;
+    animation-duration: 500ms;
+  }
+  .icon:hover, .icon:focus .social-icon {
+    transform: rotateY(180deg);
   }
