@@ -7,6 +7,26 @@
     --secondary-color: #27cb8b;
     --primary-color: #0010ff;
   }
+  .hover-effect{
+    display: inline-block;
+  position: relative;
+  }
+  .hover-effect:after{
+    content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0010ff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  }
+  .hover-effect:hover:after{
+    transform: scaleX(1);
+  transform-origin: bottom left;
+  }
   .btn-secondary{
     background-color: var(--secondary-color);
     border: none;
@@ -52,7 +72,7 @@
     top: 0;
     right: 0;
     background-repeat: no-repeat;
-    width: 50%;
+    width: 80%;
   }
   .social-icon{
     backface-visibility: hidden;

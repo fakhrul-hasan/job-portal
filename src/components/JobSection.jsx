@@ -8,7 +8,7 @@ import job2 from "../../public/job-iocn2.svg";
 import job3 from "../../public/job-iocn3.svg";
 import job4 from "../../public/job-iocn4.svg";
 import job5 from "../../public/job-iocn5.svg";
-
+import CountUp from 'react-countup';
 import { Autoplay } from "swiper";
 import Image from "next/image";
 
@@ -16,7 +16,8 @@ const JobSection = () => {
   return (
     <div className="px-8">
       <div className="mx-auto text-center w-2/3 p-10 my-5 space-y-8">
-        <h1 className="text-primary-color text-9xl font-bold">1000+</h1>
+        <h1 className="text-primary-color text-9xl font-bold">
+        <CountUp end={1000} separator="" />+</h1>
         <h3 className="font-semibold text-text-color text-5xl">
           Browse From Our Top Jobs
         </h3>

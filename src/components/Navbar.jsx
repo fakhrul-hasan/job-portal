@@ -3,7 +3,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-transparent fixed z-10">
+        <div className="navbar bg-transparent fixed z-40">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -22,12 +22,12 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-    <li className='text-text-color font-semibold text-xl'><a>Home</a></li>
+    <li className='text-text-color font-semibold text-xl'><a className='hover-effect hover:bg-transparent'>Home</a></li>
         <li className='text-text-color font-semibold text-xl'>
-          <a>Browse Job</a>
+          <a className='hover-effect hover:bg-transparent'>Browse Job</a>
         </li>
-        <li className='text-text-color font-semibold text-xl'><a>Page</a></li>
-        <li className='text-text-color font-semibold text-xl'><a>Contact</a></li>
+        <li className='text-text-color font-semibold text-xl'><a className='hover-effect hover:bg-transparent'>Page</a></li>
+        <li className='text-text-color font-semibold text-xl'><a className='hover-effect hover:bg-transparent'>Contact</a></li>
     </ul>
   </div>
   <div className="navbar-end">
